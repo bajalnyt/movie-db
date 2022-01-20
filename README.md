@@ -1,5 +1,8 @@
 #### Movie DB
 
+![example workflow](https://github.com/bajalnyt/movie-db/actions/workflows/go.yml/badge.svg)
+
+
 Go Course at https://lets-go-further.alexedwards.net/
 
 #### Project layout
