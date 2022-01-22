@@ -11,7 +11,7 @@ type Movie struct {
 	CreatedAt time.Time `json:"-"` // Hyphen directive hides it
 	Title     string    `json:"title"`
 	Year      int32     `json:"year,omitempty"`
-	Runtime   int32     `json:"runtime,omitempty,string"` //force to be string in json response
+	Runtime   Runtime   `json:"runtime,omitempty,string"` //force to be string in json response
 	Genres    []string  `json:"genres,omitempty"`
 	Version   int32     `json:"version"`
 }

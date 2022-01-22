@@ -18,7 +18,9 @@ func (app *application) readIDParam(r *http.Request) (int64, error) {
 	return id, nil
 }
 
-func (app *application) writeJSON(w http.ResponseWriter, status int, data interface{}, headers http.Header) error {
+type envelope map[string]interface{}
+
+func (app *application) writeJSON(w http.ResponseWriter, status int, data envelope, headers http.Header) error {
 	// Here we use no line prefix ("") and tab indents ("\t") for each element.
 	//  use JSON.Marshal for unformatted
 	js, err := json.MarshalIndent(data, "", "\t")
