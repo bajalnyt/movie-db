@@ -1,4 +1,4 @@
-#### Movie DB
+### Movie DB
 
 ![example workflow](https://github.com/bajalnyt/movie-db/actions/workflows/go.yml/badge.svg)
 
