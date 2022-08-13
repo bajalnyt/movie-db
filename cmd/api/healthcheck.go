@@ -4,9 +4,8 @@ import (
 	"net/http"
 )
 
-// Implemented as a method on the Application struct. Makes it easier to inject dependancies
+// Implemented as a method on the Application struct. Makes it easier to inject dependencies
 func (app *application) healthCheckHandler(w http.ResponseWriter, r *http.Request) {
-
 	// Approach 1: Write the JSON as the HTTP response body.
 	/*
 		js := `{"status": "available", "environment": %q, "version": %q}`

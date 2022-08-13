@@ -17,7 +17,7 @@ type config struct {
 	env  string
 }
 
-//Holds the dependancies needed by app
+// Holds the dependencies needed by app
 type application struct {
 	config config
 	logger *log.Logger
@@ -38,11 +38,12 @@ func main() {
 	}
 
 	srv := &http.Server{
-		Addr:         fmt.Sprintf(":%d", cfg.port),
-		Handler:      app.routes(),
-		IdleTimeout:  time.Minute,
-		ReadTimeout:  10 * time.Second,
-		WriteTimeout: 10 * time.Second,
+		Addr:              fmt.Sprintf(":%d", cfg.port),
+		Handler:           app.routes(),
+		IdleTimeout:       time.Minute,
+		ReadTimeout:       10 * time.Second,
+		WriteTimeout:      10 * time.Second,
+		ReadHeaderTimeout: 10 * time.Second,
 	}
 
 	logger.Printf("starting %s server on %s", cfg.env, srv.Addr)
